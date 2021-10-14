@@ -81,6 +81,15 @@ secrets.tar
 __pycache__
 .python-version
 
+# Python vitrual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
 # Prerequisites for updating ChibiOS
 /util/fmpp*
 
