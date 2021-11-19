@@ -6,7 +6,7 @@
 //------------------------------------------------------------------------------
 
 #include QMK_KEYBOARD_H
-#include "g/keymap_combo.h"
+// #include "g/keymap_combo.h"
 
 // Layers
 enum {
@@ -19,12 +19,16 @@ enum {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT_split_3x5_3(
-  KC_Q,               KC_W, KC_E, KC_R, KC_T,    KC_Y, KC_U, KC_I,    KC_O,   KC_P,
-  KC_A,               KC_S, KC_D, KC_F, KC_G,    KC_H, KC_J, KC_K,    KC_L,   KC_SCLN,
-  MT(MOD_LSFT, KC_Z), KC_X, KC_C, KC_V, KC_B,    KC_N, KC_M, KC_COMM, KC_DOT, MT(MOD_RSFT, KC_SLSH),
+  KC_Q,               KC_W,               KC_E,               KC_R,               KC_T,    KC_Y, KC_U,               KC_I,                  KC_O,                 KC_P,
+  KC_A,               KC_S,               KC_D,               KC_F,               KC_G,    KC_H, KC_J,               KC_K,                  KC_L,                 KC_SCLN,
+  MT(MOD_LSFT, KC_Z), MT(MOD_LCTL, KC_X), MT(MOD_LALT, KC_C), MT(MOD_LGUI, KC_V), KC_B,    KC_N, MT(MOD_RGUI, KC_M), MT(MOD_RALT, KC_COMM), MT(MOD_RCTL, KC_DOT), MT(MOD_RSFT, KC_SLSH),
 
-  MT(MOD_LALT, KC_ESC),   MT(MOD_LGUI, KC_SPC), LT(_SYM_LEFT, KC_BSPC),              // Left
-  LT(_SYM_RIGHT, KC_ENT), KC_SPC,               MT(MOD_RCTL, KC_TAB)                 // Right
+  // MT(MOD_LALT, KC_ESC),   MT(MOD_LGUI, KC_SPC), LT(_SYM_LEFT, KC_TAB),               // Left
+  // LT(_SYM_RIGHT, KC_ENT), KC_SPC,               MT(MOD_RCTL, KC_TAB)                 // Right
+
+  // todo: remove again, test with less mods in bottom row
+  KC_ESC,                 MT(MOD_LGUI, KC_SPC), LT(_SYM_LEFT, KC_TAB),               // Left
+  LT(_SYM_RIGHT, KC_ENT), KC_SPC,               KC_TAB                               // Right
 ),
 
 [_SYM_LEFT] = LAYOUT_split_3x5_3(
@@ -42,12 +46,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 )};
 
 // Key Overrides
-const key_override_t open_prn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC_RPRN);
-const key_override_t open_brc_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, KC_RBRC);
-const key_override_t open_cbr_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LCBR, KC_RCBR);
+const key_override_t close_prn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC_RPRN);
+const key_override_t close_brc_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, KC_RBRC);
+const key_override_t close_cbr_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LCBR, KC_RCBR);
 
 const key_override_t **key_overrides = (const key_override_t *[]){
-    &open_prn_key_override, &open_brc_key_override, &open_cbr_key_override,
-    &ko_make_basic(MOD_MASK_SHIFT, KC_BSPACE, KC_DELETE), // test, todo: remove if doesn't work
+    &close_prn_key_override, &close_brc_key_override, &close_cbr_key_override,
+    &ko_make_basic(MOD_MASK_SHIFT, KC_BSPACE, KC_DELETE),
     NULL  // Null terminate the array of overrides!
 };

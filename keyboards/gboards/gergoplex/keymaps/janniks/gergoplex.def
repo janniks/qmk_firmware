@@ -1,3 +1,5 @@
+// LEGACY COMBO DEFINITIONS
+
 // janniks custom Gergoplex combos
 SUBS(pasta,       "I'd just like to interject for a moment.",       KC_H, KC_J, KC_K, KC_L)
 
@@ -14,4 +16,3 @@ COMB(ioUarrow,       KC_UP,            KC_I, KC_O)
 
 // # Notes to self:
 // - keys cant be used for combos if they're also used in a mod-tap
-// -

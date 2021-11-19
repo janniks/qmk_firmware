@@ -8,4 +8,5 @@
 // #include "combos/eng-combos.def"
 
 // User includes
-#include "gergoplex.def"
+// todo: uncomment if qmk combos don't work
+//#include "gergoplex.def"
