@@ -9,7 +9,7 @@ DEBUG_MATRIX           = no
 CONSOLE_ENABLE         = no
 
 # gBoards Combos
-VPATH                 += keyboards/gboards/
+# VPATH                 += keyboards/gboards/
 
 # QMK Combos
 SRC                   += combos.c
