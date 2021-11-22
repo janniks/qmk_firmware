@@ -19,19 +19,10 @@ enum {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT_split_3x5_3(
-  // KC_Q,               KC_W,               KC_E,               KC_R,               KC_T,    KC_Y, KC_U,               KC_I,                  KC_O,                 KC_P,
-  // KC_A,               KC_S,               KC_D,               KC_F,               KC_G,    KC_H, KC_J,               KC_K,                  KC_L,                 KC_SCLN,
-  // MT(MOD_LSFT, KC_Z), MT(MOD_LCTL, KC_X), MT(MOD_LALT, KC_C), MT(MOD_LGUI, KC_V), KC_B,    KC_N, MT(MOD_RGUI, KC_M), MT(MOD_RALT, KC_COMM), MT(MOD_RCTL, KC_DOT), MT(MOD_RSFT, KC_SLSH),
-
-  // todo: remove again if something doesn't work
   KC_Q,               KC_W,               KC_E,               KC_R,               KC_T,    KC_Y, KC_U,               KC_I,                  KC_O,                 KC_P,
   MT(MOD_LSFT, KC_A), MT(MOD_LCTL, KC_S), MT(MOD_LALT, KC_D), MT(MOD_LGUI, KC_F), KC_G,    KC_H, MT(MOD_RGUI, KC_J), MT(MOD_RALT, KC_K),    MT(MOD_RCTL, KC_L),   MT(MOD_RSFT, KC_SCLN),
   MT(MOD_LSFT, KC_Z), MT(MOD_LCTL, KC_X), MT(MOD_LALT, KC_C), MT(MOD_LGUI, KC_V), KC_B,    KC_N, MT(MOD_RGUI, KC_M), MT(MOD_RALT, KC_COMM), MT(MOD_RCTL, KC_DOT), MT(MOD_RSFT, KC_SLSH),
 
-  // MT(MOD_LALT, KC_ESC),   MT(MOD_LGUI, KC_SPC), LT(_SYM_LEFT, KC_TAB)),               // Left
-  // LT(_SYM_RIGHT, KC_ENT), KC_SPC,               MT(MOD_RCTL, KC_TAB)                 // Right
-
-  // todo: remove again, this is a test with less mods in bottom row
   KC_ESC,                 MT(MOD_LGUI, KC_SPC), LT(_SYM_LEFT, KC_TAB),               // Left
   LT(_SYM_RIGHT, KC_ENT), KC_SPC,               KC_TAB                               // Right
 ),
@@ -47,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TRNS,             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_PLUS, KC_UNDS, KC_TRNS, KC_LCBR, KC_BSLS,
   KC_1,                KC_2,    KC_3,    KC_4,    KC_5,       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_QUOT,
   MT(MOD_LSFT, KC_F1), KC_F2,   KC_F3,   KC_F4,   KC_F5,      KC_MINS, KC_EQL,  KC_BSLS, KC_LBRC, MT(MOD_RSFT, KC_BSLS),
-                                  KC_F11, KC_F12, KC_TRNS,    KC_TRNS, KC_TRNS, KC_DEL
+                                KC_F11,  KC_F12,  KC_TRNS,    KC_TRNS, KC_TRNS, KC_DEL
 )};
 
 // Key Overrides
