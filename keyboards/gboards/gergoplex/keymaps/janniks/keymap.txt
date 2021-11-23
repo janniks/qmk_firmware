@@ -62,15 +62,13 @@
 
 
 Ideas/Todo
-- try f keys above, media keys below?
-- emdash
-- add toggle for colemak! might be hard to do while keeping combos
-- switch SPC back to innermost key?
-- maybe add holds to other layers as well
-- move mods to home row, will break combos, transition to function combos
-- move shift to home row
 - !add num pad instead of num row (nums are already two-handed)
-
+- replace right/second TAB with new idea (e.g. toggle layer for one handed chords, e.g. media keys, or similar)
+- maybe add holds to other layers as well?
+- try f keys above, media keys below?
+- add dedicated/simpler emdash? (emdash works)
+- switch SPC back to innermost key?
+- add toggle for colemak! might be hard to do while keeping combos
 
 
 
