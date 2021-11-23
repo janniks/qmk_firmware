@@ -6,7 +6,6 @@
 //------------------------------------------------------------------------------
 
 #include QMK_KEYBOARD_H
-// #include "g/keymap_combo.h"
 
 // Layers
 enum {
@@ -21,17 +20,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_BASE] = LAYOUT_split_3x5_3(
   KC_Q,               KC_W,               KC_E,               KC_R,               KC_T,    KC_Y, KC_U,               KC_I,                  KC_O,                 KC_P,
   MT(MOD_LSFT, KC_A), MT(MOD_LCTL, KC_S), MT(MOD_LALT, KC_D), MT(MOD_LGUI, KC_F), KC_G,    KC_H, MT(MOD_RGUI, KC_J), MT(MOD_RALT, KC_K),    MT(MOD_RCTL, KC_L),   MT(MOD_RSFT, KC_SCLN),
-  MT(MOD_LSFT, KC_Z), MT(MOD_LCTL, KC_X), MT(MOD_LALT, KC_C), MT(MOD_LGUI, KC_V), KC_B,    KC_N, MT(MOD_RGUI, KC_M), MT(MOD_RALT, KC_COMM), MT(MOD_RCTL, KC_DOT), MT(MOD_RSFT, KC_SLSH),
+  MT(MOD_LSFT, KC_Z), KC_X,               KC_C,               KC_V,               KC_B,    KC_N, KC_M,               KC_COMM,               KC_DOT,               MT(MOD_RSFT, KC_SLSH),
 
   KC_ESC,                 MT(MOD_LGUI, KC_SPC), LT(_SYM_LEFT, KC_TAB),               // Left
   LT(_SYM_RIGHT, KC_ENT), KC_SPC,               KC_TAB                               // Right
 ),
 
 [_SYM_LEFT] = LAYOUT_split_3x5_3(
-  KC_TRNS,               KC_TRNS, KC_TRNS, KC_TRNS, KC_PIPE,    KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLD, KC_VOLU,
-  KC_EXLM,               KC_AT,   KC_HASH, KC_DLR,  KC_PERC,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-  MT(MOD_LSFT, KC_TRNS), KC_TRNS, KC_TRNS, KC_GRV,  KC_TILD,    KC_F6,   KC_F7,   KC_F8,   KC_F9,   MT(MOD_RSFT, KC_F10),
-                                  KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_MPLY, KC_MNXT
+  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_PIPE,    KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLD, KC_VOLU,
+  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
+  KC_TRNS, KC_TRNS, KC_TRNS, KC_GRV,  KC_TILD,    KC_F6,   KC_F7,   KC_F8,   KC_F9,   MT(MOD_RSFT, KC_F10),
+                    KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_MPLY, KC_MNXT
 ),
 
 [_SYM_RIGHT] = LAYOUT_split_3x5_3(
