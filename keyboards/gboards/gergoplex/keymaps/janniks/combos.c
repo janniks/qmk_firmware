@@ -6,17 +6,17 @@ const uint16_t PROGMEM combo_as[] = {MT(MOD_LSFT, KC_A), MT(MOD_LCTL, KC_S), COM
 
 // Arrows
 const uint16_t PROGMEM combo_lsmcl[] = {MT(MOD_RCTL, KC_L), MT(MOD_RSFT, KC_SCLN), COMBO_END};
-const uint16_t PROGMEM combo_jk[] = {MT(MOD_RGUI, KC_J), MT(MOD_RALT, KC_K), COMBO_END};
-const uint16_t PROGMEM combo_kl[] = {MT(MOD_RALT, KC_K), MT(MOD_RCTL, KC_L), COMBO_END};
+const uint16_t PROGMEM combo_jk[] = {MT(MOD_RGUI, KC_J), MT(MOD_LALT, KC_K), COMBO_END};
+const uint16_t PROGMEM combo_kl[] = {MT(MOD_LALT, KC_K), MT(MOD_RCTL, KC_L), COMBO_END};
 const uint16_t PROGMEM combo_io[] = {KC_I, KC_O, COMBO_END};
 
 // Register
 combo_t key_combos[] = {
   COMBO(combo_op, KC_BSPC),
-  COMBO(combo_as, KC_ESC),
-  COMBO(combo_lsmcl, KC_RGHT),
-  COMBO(combo_jk, KC_LEFT),
-  COMBO(combo_kl, KC_DOWN),
+  COMBO(combo_as, MT(MOD_LSFT | MOD_LCTL, KC_ESC)),
+  COMBO(combo_lsmcl, MT(MOD_RCTL | MOD_RSFT, KC_RGHT)),
+  COMBO(combo_jk, MT(MOD_RGUI | MOD_LALT, KC_LEFT)),
+  COMBO(combo_kl, MT(MOD_LALT | MOD_RCTL, KC_DOWN)),
   COMBO(combo_io, KC_UP),
 };
 // https://docs.qmk.fm/#/feature_combo?id=variable-length-combos
