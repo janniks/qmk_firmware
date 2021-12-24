@@ -41,13 +41,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 KC_F11,  KC_F12,  KC_TRNS,    KC_TRNS, KC_TRNS, KC_DEL
 )};
 
-// Key Overrides
-const key_override_t close_prn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC_RPRN);
-const key_override_t close_brc_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, KC_RBRC);
-const key_override_t close_cbr_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LCBR, KC_RCBR);
-
-const key_override_t **key_overrides = (const key_override_t *[]){
-    &close_prn_key_override, &close_brc_key_override, &close_cbr_key_override,
-    &ko_make_basic(MOD_MASK_SHIFT, KC_BSPACE, KC_DELETE),
-    NULL  // Null terminate the array of overrides!
-};
